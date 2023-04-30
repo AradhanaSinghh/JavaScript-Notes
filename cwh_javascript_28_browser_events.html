@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Browser events</title>
+</head>
+<body>
+    <h1>Browser events</h1>
+    <h2 id="#heading">my heading</h2>
+    <div class="container" onmouseenter="console.log('container ke andar ghus gaya')">
+        <button onclick="alert('hello'); let a=6; console.log(a)">click me</button>
+    </div>
+    <input type="text" id="input_date">
+    <button type="button" id="btn">click</button>
+    <button type="reset" id="btn1">reset</button>
+    <script>
+
+        let a1 = document.getElementsByClassName("container");
+        a1.onclick=()=>{
+            let b=document.getElementByClassName("container");
+            b.innertext="Hello world!";
+            console.log(b);
+        }
+
+        document.getElementById('btn').addEventListener('click',function(){
+            let date=new Date();
+            let change_date=document.getElementById('input_date');
+            change_date.value=date;
+        });
+        document.getElementById('btn1').addEventListener('click',function(){
+            let remove_date=document.getElementById('input_date');
+            remove_date.value=" ";
+        })
+        
+    </script>
+</body>
+</html>

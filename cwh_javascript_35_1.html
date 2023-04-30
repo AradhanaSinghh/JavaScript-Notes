@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        
+    function checking_name(name){
+        return new Promise(function(resolve,reject){
+            setTimeout(()=>{
+                console.log("your name is: "+ name);
+                const error=false;
+                if(!error){
+                   resolve();  
+                }
+               else{
+                   reject();
+               }
+            },5000)
+        })
+    }
+
+    function returning_name(){
+        setTimeout(()=>{
+            console.log("the program executed successfully!");
+        },1000);
+    }
+
+    let student="aradhana";
+checking_name(student).then(function(){
+    returning_name();
+}).catch(function(){
+        console.log("error occured!");
+    })
+    </script>
+</body>
+</html>

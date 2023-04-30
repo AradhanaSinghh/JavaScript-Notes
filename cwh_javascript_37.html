@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Arrow function</title>
+</head>
+<body>
+    <script>
+        //ARROW FUNCTION
+        //creating a regular function
+        // const aradhana=function(){
+        //     console.log("this is the best person ever");
+        // }
+
+        //converting it into an arrow function
+        // const aradhana=()=>{
+        //     console.log("this is the best person ever");
+        // }
+        // aradhana();
+
+        //function returning something
+        // const greet=function(){
+        //     return "good morning";
+        // }
+
+
+        //one liners do not require braces/return
+
+        // const greet=()=>"good morning";
+
+        // console.log(greet());
+
+        //when returning object
+        // const greet=()=>({name:"harry"});
+        
+        //single parameter do not need parenthesis
+        //but you will have to put parenthesis if there are multiple parameters.
+
+        const greet=(name,ending)=>"good morning" + ending + name;
+        console.log(greet(` Aradhana`,` bye`));
+    </script>
+</body>
+</html>

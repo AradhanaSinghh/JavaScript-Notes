@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Handling browser events</title>
+    <script
+      src="https://code.jquery.com/jquery-3.6.1.js"
+      integrity="sha256-3zlB5s2uwoUzrXK3BT7AX3FyvojsraNFxCc2vC/7pNI="
+      crossorigin="anonymous"
+></script>
+</head>
+<body>
+
+    <h1>Handling browser events</h1>
+    <button type="button" id="btn">Submit</button>
+    <button type="submit" id="btn1">Click me</button>
+    <p >Lorem ipsum dolor sit amet consectetur adipisicing elit. Omnis quis sed illo ab? Dolor id, atque dolore accusantium facere doloremque magnam labore ratione soluta ipsam culpa architecto et? Vero quod in eum!</p>
+    <script>
+        
+        //remove event listener tbhi kaam krta h jb apka function or event same ho
+        let x=function (e) { //e is pointerEvent 
+            console.log(e.target);
+            console.log(e);
+            // alert("Hello World!");
+        };
+
+        // let y=function (e){
+        //     alert("Hello World2!");
+        // };
+        
+        // btn.addEventListener('click',x);
+        // btn.addEventListener('click',y); 
+
+        let a = prompt("What is your favorite number?");
+        if(a=="2"){
+            btn.removeEventListener('click',x);
+        }
+
+    </script>
+</body>
+</html>

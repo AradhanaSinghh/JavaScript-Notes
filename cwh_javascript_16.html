@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Creating, removing and replacing elements</title>
+</head>
+<body>
+    <div class="container">
+        <!--this-->
+        <!--this-->
+        <h1 id="heading">Welcome to Aradhana's page</h1>
+        <div  class="child red" id="myfirst">child 1</div>
+        <ul class="this" id="myul">
+            <li class="childul" id="fui">this</li>
+            <li class="childul">is</li>
+            <li class="childul">a</li>
+            <li class="childul">list</li>
+            <li class="childul" id="lui">of my dreams</li>
+        </ul>
+        <div class="child">child 2</div>
+        <div class="child red">child 3</div>
+        <div class="child">child 4</div>
+        <form action="none.html"></form>
+        <input type="text" required placeholder="write your name">
+        <button type="button">Submit</button>
+        <!-- <a href="www.google.com" >go to google</a>
+        <img src="flower.jpg"> -->
+
+    </div>
+    </div>
+    <script>
+        let element=document.createElement('li');
+        let text=document.createTextNode('This is a text node');
+        element.appendChild(text);
+        element.className='childul';
+        element.id='createdLi'; 
+        // element.setAttribute('title','mytitle');
+        // element.innerText='Hello this is created by Aradhana';
+        
+        let ul=document.querySelector('ul.this');
+        ul.appendChild(element);
+        console.log(ul);
+        // console.log(element);
+        
+        let elem2=document.createElement('h3');
+        elem2.id='elem2';
+        elem2.className='elem2';
+        elem2.setAttribute('title','mera title');
+        let tnode=document.createTextNode("elem2 created node");
+        elem2.appendChild(tnode);
+
+        element.replaceWith(elem2);
+        let myul=document.getElementById('myul');
+        myul.replaceChild(element,document.getElementById('fui'));
+        myul.removeChild(element,document.getElementById('fui'));
+
+        let pr=elem2.hasAttribute('title');
+        console.log(pr,elem2);
+        pr=elem2.removeAttribute('title');
+        console.log(elem2);
+
+    </script>
+</body>
+</html>

@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Local and session</title>
+</head>
+<body>
+    <script>
+        //we can't add array to local storage as it convert it in the form of string but there is an alternative approach to do so
+        let impArray=['adrak','bhindi','pyaaz'];
+        //add a key-value inside local storage
+        localStorage.setItem('Name','Rashmi');
+        localStorage.setItem('Name2','Rahul');
+        localStorage.setItem('sabzi', JSON.stringify(impArray));//object ko string me convert krta h 
+        //you can retrieve it in console by typing window.localStorage.Name, window.localStorage.Name2
+
+        // localStorage.clear(); -- clears the entire local storage
+        // clear a particular key-value pair
+        // localStorage.removeItem('Name')
+
+        //retreive an item from local storage
+        let name=localStorage.getItem('Name');
+        let name1=localStorage.getItem('Name2');
+        let name2=JSON.parse(localStorage.getItem('sabzi'));//json.parse string lete hai aur object dete h
+        console.log(name);
+        console.log(name1);
+        console.log(name2); 
+
+        //session storage
+        //has same methods..
+        sessionStorage.setItem('sessionName','Rashmi');
+        sessionStorage.setItem('sessionName2','Rahul');
+        sessionStorage.setItem('sessionSabzi', JSON.stringify(impArray));
+        /*
+         the difference is that while data in localStorage doesn't expire, data in sessionStorage is cleared when the page session ends.
+        */
+       localStorage.setItem('place1','haryana');
+       localStorage.setItem('place2','Bulgeria');
+       let place=localStorage.getItem('place1');
+       let place1=localStorage.getItem('place2');
+       console.log(place);
+       console.log(place1);
+       localStorage.removeItem('place1');
+       localStorage.removeItem('place2');
+    </script>
+</body>
+</html>

@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>ES6 classes and inheritence</title>
+  </head>
+  <body>
+    <h1>ES6 classes and inheritence</h1>
+    <script>
+      //class is a blueprint
+      class Employee{
+        constructor(givenName, givenExperience, givenDivision) {
+          this.name = givenName;
+          this.experience = givenExperience;
+          this.division = givenDivision;
+        }
+
+        slogan() {
+          return `Good Morning! ${this.name} `;
+        }
+
+        joiningYear() {
+          return 2019 - this.experience;
+        }
+
+        //static method
+        static add(a, b) {
+          return a + b;
+        }
+
+        //inheritence
+      }
+      class Programmer extends Employee {
+        constructor(
+          givenName,
+          givenExperience,
+          givenDivision,
+          givenLanguage,
+          givenGithub
+        ) {
+          super(givenName, givenExperience, givenDivision);
+          this.language = givenLanguage;
+          this.github = givenGithub;
+        }
+        
+        // we can't use static before favoriteLanguage() as if we use this with language (this.language) will throw an error as there will be a connection established with the class
+        favoriteLanguage() {
+          if (this.language == "python"){
+            return "python";
+          } else {
+            return "javaScript";
+          }
+        }
+        
+        static multiply(a,b){
+            return a*b;
+        }
+      }
+      
+    //   let emp = new Employee("Aradhana", 34, 1);
+    //   console.log(emp);
+    //   console.log(emp.slogan());
+    //   console.log(emp.joiningYear());
+    //   console.log(Employee.add(1, 2));
+      // let programmer=new Programmer("rohan",3,"Lays","python","Rohan34");
+      // console.log(programmer.division);
+      // console.log(programmer.favoriteLanguage());
+      // console.log(Programmer.multiply(2,3));
+      // console.log(Programmer.add(2,3));
+      // console.log(programmer.slogan());
+      
+    </script>
+  </body>
+</html>

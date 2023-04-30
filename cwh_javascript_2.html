@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>let,const, and var</title>
+</head>
+<body>
+    <script>
+
+        //variables in js
+        //var, let, const --used to declare variable
+        var name="Aradhana";
+        var name1='Aradhana';
+        var name2=`Ar"adh"ana`;
+
+        console.log(name);
+        console.log(name1);
+        console.log(name2);
+        
+        var channel;
+        var marks=3456;
+        var marks1='3456cwh';
+
+        marks=0; //will change 3456 to 0 
+        console.log(name,channel,marks,marks1)/*it will show undefined for channel as nothing has been declared */
+        //Rules for creating Javascript variables :-
+       /*
+        1.can't start with numbers
+        2. Can start with letter, numbers, _ or $
+        3. Are case sensitive
+        4.var has global scope
+        */
+
+       //In var the variables can get modified but not in const 
+       //It will give you uncaught typeError
+       //const:- koi b variable ka naam change na kr paaye th hm use krenge const 
+
+       const ownersName='Hari Ram';
+    //    ownersName='Aradhana'; //can't do this(error) --block level scope
+       console.log(ownersName);
+    //    const fruit; you can't declare a variable without giving a value
+    var city='Delhi';
+       console.log(city);
+       
+    {
+        let city='Rampur';
+        city='kolkata';
+        console.log(city);//kolkata as an output
+    }
+
+    console.log(city);//delhi as an output
+    const arr1=[12,23,[45,3],-7];
+    // arr1=[56,[90,89],768]//not allowed
+    arr1.push(29);
+    console.log(arr1);
+  
+    /*
+    Most common programming case types :-
+    1.camelCase
+    2.kebab-case
+    3.snake_case
+    4.PascalCase
+    */
+
+    </script>
+</body>
+</html>

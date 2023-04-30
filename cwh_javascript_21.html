@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Object literals, constructors and object oriented javaScript</title>
+</head>
+<body>
+    <script>
+        let car={
+            name:'Maruti 800',
+            topSpeed:89,
+            run: function(){
+                console.log("car is running!");
+            }
+        }
+//we have already seen constructors like these:
+//new Date();
+
+        function GeneralCar(givenName, givenSpeed){
+            this.name= givenName;
+            this.topSpeed=givenSpeed;
+            this.run=function(){
+                console.log(`${this.name} is running`);
+            }
+            this.analyze=function(){
+                console.log(`this car is slower by ${200 - this.topSpeed} kmph than mercedes`);
+            }
+        }
+        
+        // console.log(car);
+       let car1=new GeneralCar("ferrari",56);
+       console.log(car1.run());
+
+    </script>
+</body>
+</html>

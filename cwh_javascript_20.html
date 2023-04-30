@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>question-2</title>
+    
+</head>
+<body>
+    <div class="container">
+        <!--this-->
+        <!--this-->
+        <h1 id="heading" class="yourhead">Welcome to Aradhana's page</h1>
+        <div  class="child red" id="myfirst">child 1</div>
+        <ul class="this" id="myul">
+            <li class="childul" id="fui">this</li>
+            <li class="childul">is</li>
+            <li class="childul">a</li>
+            <li class="childul">list</li>
+            <li class="childul" id="lui">of my dreams</li>
+        </ul>
+        <div class="child">child 2</div>
+        <div class="child red">child 3</div>
+        <div class="child">child 4</div>
+        <form action="none.html"></form>
+        <input type="text" required placeholder="write your name">
+        <button type="button" id="btn">Submit</button>
+        <!-- <a href="www.google.com" >go to google</a>
+        <img src="flower.jpg"> -->
+        <br>
+        <br>
+        <div class="no">This is a dummy div1</div>
+        <div class="no">This is a dummy div2</div>
+        <div class="no">This is a dummy div3</div>
+        <div class="no">This is a dummy div4</div>
+    </div>
+    </div>
+    <script>
+
+        /*
+        You have to create a div and inject it into the page which contains a heading.
+        whenever someone clicks on the div,it should be converted into an editable item. Whenever user clicks away (blur). save the note into the local storage.
+        */
+
+       let divElem= document.createElement('div');
+       let text=document.createTextNode('This is my element.Click to edit it.');
+       divElem.appendChild(text);
+       divElem.setAttribute('id','elem');
+       divElem.setAttribute('class','elem');
+       divElem.setAttribute('style','border:2px solid black; width:154px; margin:34px; padding:23px;');
+       let container=document.querySelector('.container');
+       let first=document.getElementById('myfirst');
+
+       //Insert the element before element with id first
+       container.insertBefore(divElem,first);
+       console.log(divElem, container, first);
+       
+    // add event listener to the divElem
+    divElem.addEventListener('click', function () {
+    let noTextAreas = document.getElementsByClassName('textarea').length; 
+    if(noTextAreas ==0) {
+    let html = elem.innerHTML;
+    divElem.innerHTML = `<textarea class="textarea form-control" id="textarea" rows="3"> ${html} </textarea>`;
+    }
+
+    //listen for the blur event on textarea
+    let textarea = document.getElementById('textarea');
+    textarea.addEventListener('blur', function() {
+        divElem.innerHTML = textarea.value;
+        localStorage.setItem('text', textarea.value);
+    })// Do something when the input field loses focus
+});
+
+    </script>
+</body>
+</html>

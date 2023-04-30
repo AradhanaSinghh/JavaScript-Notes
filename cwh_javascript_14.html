@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>document selectors</title>
+</head>
+<body>
+    <div class="container">
+        <h1 id="heading">Welcome to Aradhana's page</h1>
+        <div  class="child red" id="myfirst">child 1</div>
+        <div class="child">child 2</div>
+        <div class="child red">child 3</div>
+        <div class="child">child 4</div>
+        <form action="none.html"></form>
+        <input type="text" required placeholder="write your name">
+        <button type="button">Submit</button>
+        <!-- <a href="www.google.com" >go to google</a>
+        <img src="flower.jpg"> -->
+     </div>
+    </div>
+    <script>
+        
+        let a=document.getElementById('heading');
+        a.style.color='red';
+        a.style.textAlign='center';
+        // a.innerText='Hi! the text has been changed with the help of inner text';
+        // a.innerHTML='<b>This <em>is</em> the new Heading<b>';
+        let sel=document.querySelector('#myfirst');
+        sel=document.querySelector('.child');
+        sel=document.querySelector('div');
+        sel.style.color='aqua';
+        let selector1=document.querySelector('input');
+        selector1.style.color='lavender';
+        selector1.style.background='black';
+        let selector=document.querySelector('button');
+        selector.style.color='red';
+        selector.style.background='black';
+
+        // using for and for each loop
+
+        let elems=document.getElementsByClassName('child');
+        elems=document.getElementsByClassName('container');
+        elems=document.getElementsByTagName('div');
+        console.log(elems);
+
+        for(let index=0;index<elems.length;index++){
+            const element=elems[index];
+            console.log(element);
+            element.style.color='purple';
+        }
+        
+        // Array.from(elems).forEach(element=>{
+        //     console.log(element);
+        //     element.style.color='pink';
+        // });
+        
+    </script>
+</body>
+</html>

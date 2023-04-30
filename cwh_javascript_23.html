@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Prototype inheritence</title>
+</head>
+<body>
+    <script>
+        const proto={
+            slogan:function(){
+               return `this company is the best`;
+            },
+            changeName: function(newName){
+                this.name=newName;
+            } 
+        }
+
+//this creates aradhana object
+        const Aradhana=Object.create(proto);
+        Aradhana.name="Aradhana";
+        Aradhana.role="Programmer";
+
+//this also creates aradhana object
+        const Aradhana1=Object.create(proto,{
+            name: {value:"Aradhana", writable:true},//writable true is to change the name from aradhana to aradhana2
+            role: {value:"Programmer"}
+        });
+
+// Aradhana.changeName("Aradhana2");
+        console.log(Aradhana);
+
+        //employee constructor
+        function Employee(name, salary,experience){
+            this.name=name;
+            this.salary=salary;
+            this.experience=experience;
+        }
+
+        //slogan
+        Employee.prototype.slogan=function(){
+            return `This company is the best. Regards! ${this.name}`;
+        }
+
+        let emp=new Employee("Aradhana",4539872,34);
+        console.log(emp.slogan());
+        
+        //Programmer
+        function Programmer(name,salary,experience,language){
+            Employee.call(this, name, salary, experience);
+            this.language=language;
+        }
+        
+        //inherit the prototype
+        Programmer.prototype=Object.create(Employee.prototype);
+
+        //Manually set the constructor
+        Programmer.prototype.constructor=Programmer;
+
+        let Rohan=new Programmer("jiya",4,0,"python");
+        console.log(Rohan);
+        // console.log(Rohan.slogan()); --will give uncaught typeError
+
+    </script>
+</body>
+</html>

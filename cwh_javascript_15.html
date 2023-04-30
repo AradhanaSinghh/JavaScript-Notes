@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Children,parent and traversing the DOM</title>
+</head>
+<body>
+    <div class="container">
+        <!--this-->
+        <!--this-->
+        <h1 id="heading">Welcome to Aradhana's page</h1>
+        <div  class="child red" id="myfirst">child 1</div>
+        <ul class="this">
+            <li class="childul">this</li>
+            <li class="childul">is</li>
+            <li class="childul">a</li>
+            <li class="childul">list</li>
+            <li class="childul">of my dreams</li>
+        </ul>
+        <div class="child">child 2</div>
+        <div class="child red">child 3</div>
+        <div class="child">child 4</div>
+        <form action="none.html"></form>
+        <input type="text" required placeholder="write your name">
+        <button type="button">Submit</button>
+        <!-- <a href="www.google.com" >go to google</a>
+        <img src="flower.jpg"> -->
+        <br>
+        <br>
+
+        <div class="no">This is a dummy div1</div>
+        <div class="no">This is a dummy div2</div>
+        <div class="no">This is a dummy div3</div>
+        <div class="no">This is a dummy div4</div>
+
+    </div>
+    </div>
+    <script>
+
+        console.log('Children,parent and traversing the DOM');
+        let cont=document.querySelector('.no');
+        cont=document.querySelector('.container');
+        console.log("childnodes",cont.childNodes);//shows everything
+        console.log(cont.children);//using which helps to include collection where comments and text is not included. It only shows elements.
+        let nodename=cont.childNodes[0].nodeName;//index 0 pe jh element hai woh dede
+        let nodeType=cont.childNodes[1].nodeType;
+        console.log(nodename);
+        console.log(nodeType);
+        
+        //Node types:-
+        // 1. element
+        // 2. attribute
+        // 3. text node
+        // 8. comment
+        // 9. document
+        // 10. docType
+
+        let contain=document.querySelector('div.container');
+        console.log(contain.children[2].children);
+        console.log(contain.firstChild);
+        console.log(contain.firstElementChild);
+        console.log(contain.lastChild);
+        console.log(contain.lastElementChild);
+        console.log(contain.childElementCount); //count of child elements
+        let containing=document.querySelector('ul.this');
+        console.log(contain.children[2].nodeType);
+        console.log(contain.firstElementChild.parentNode);
+        console.log(contain.firstElementChild.nextSibling);
+        console.log(contain.firstElementChild.nextElementSibling);
+        console.log(contain.firstElementChild.nextElementSibling.nextElementSibling);
+        
+        let container=document.querySelector('li.childul');
+        console.log(container.nextElementSibling);
+
+    </script>
+</body>
+</html>

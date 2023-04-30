@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JSON</title>
+</head>
+<body>
+    <p id="aaa">cbbsudbcks</p>
+    <button onclick="show()">submit</button>
+    <!-- <button onclick="">submit</button> -->
+    <!--converting a javascipt file to -->
+    <script>
+    // function show(){
+    //     fetch("./practice1.json").then(res=>{
+    //         return res.json();
+    //     }).then(vare=>{
+    //         document.("aaa").innerHTML="the name of "+ vare.name;
+    //     })
+    // }
+
+    function show(){
+        fetch("./practice1.json").then(response=> {
+            return response.json();
+
+        }).then(vare=>{
+            document.getElementById("aaa").innerHTML=`the name of the person is ${vare.name}`;
+        })
+    }
+
+    myjson=`{
+        "name":"aradhana",
+        "class":"12"
+    }`
+
+    console.log(JSON.parse(myjson));
+    console.log(JSON.stringify(myjson));
+    </script>
+</body>
+</html>

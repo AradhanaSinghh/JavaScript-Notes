@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Try-Catch</title>
+</head>
+<body>
+    <h1>Try catch</h1>
+    <script>
+        //pretend this is coming from a server as response
+        let a="Harry bhai";
+        a=undefined;
+        if(a !=undefined){
+            throw new Error('this is not undefined');
+        }
+
+        //kyun error throw krna hai?
+        else{
+            console.log('this is undefined');
+        }
+
+        //try-catch
+        try{
+            // null.console--will give me typeerror
+            console.log("We are inside try block");
+            functionHarry();//yeh error throw krega bt catch block catch krlega error
+
+        }catch(error){ //err bhi likh sakte h
+            console.log("Are you okay?");
+            // console.log(error);//wants to print which error
+            // console.log(error.name);//wants to print which error
+            console.log(error.message);//wants to print which error
+        }
+        
+        //chahe try ho ya catch finally run karo
+        finally{
+            console.log("finally! we will run this.");
+        }
+        
+       
+    </script>
+</body>
+</html>

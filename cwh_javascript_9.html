@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>functions</title>
+</head>
+<body>
+    <script>
+        console.log('this is about functions');
+        //GLOBAL AND LOCAL SCOPE
+        if(1){
+            let i= 34;
+            console.log(i);
+        }
+        // var i=34;//global level scope
+        // let i=34;//block level scope
+
+        let i=9;
+        console.log(i);
+
+        function ui(name){
+            let i=89;//local scope
+            console.log(i);
+            return `this is a ${name} ui`;
+        }
+        console.log(ui("Aradhana"),i);
+
+        const mygreet=function greet(name, thank="overwhelmed"){
+            let msg=(`Good morning ${name} and the ${name} was ${thank}`);
+            return msg;
+        }
+       const greetin= mygreet("aradhana");
+       console.log(greetin)
+
+        // let val=mygreet("Aradhana", "happy");
+        // console.log(val);
+
+        // const myobj={
+        //     name:"Skillf",
+        //     game: function(){
+        //         return "GTA";
+        //     }
+        // }
+        // console.log(myobj.game())
+        
+        // arr=['fruit','vegetable','furniture'];
+        // arr.forEach(function(element,index,array){
+        //     console.log(element, array, index)
+        // });
+        function addition(x,y){
+            z=x+y;
+            console.log(z);
+        }
+        addition(4,5);
+
+    </script>
+</body>
+</html>

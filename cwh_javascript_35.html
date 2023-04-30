@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>promises</title>
+</head>
+<body>
+    <script>
+        function func1(){
+            return new Promise(function(resolve,reject){
+                setTimeout(()=> {
+                    const error=false;
+                    if(!error) {
+                    console.log('your promise has been resolved');
+                    resolve('resolved');
+                    }
+                    else {
+                        console.log('your promise has not been resolved');
+                        reject('sorry not fullfilled');
+                    }
+                },2000)
+            })
+        }
+    func1().then(function(solution){
+        console.log("harry: thanks for resolving "+solution);
+    }).catch(function(error){
+        console.log("aradhana: galat hai bro kuch "+ error);
+    })
+    </script>
+</body>
+</html>

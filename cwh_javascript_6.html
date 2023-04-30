@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Arrays and Objects</title>
+</head>
+<body>
+    <script>
+       console.log('Arrays and objects:- ');
+       let marks=[14,54,74,58];
+       const fruits=['orange','apple','pineapple'];
+       const mixed=['str',89,[2,3]];
+       const arr=new Array(23,123,21,'Orange',[8,9]); 
+       
+      //  console.log(mixed.slice(2));
+      //  console.log(arr);
+      //  console.log(mixed);
+      //  console.log(fruits);                          
+      //  console.log(fruits[1]);
+      //  console.log("length: " + arr.length);
+      //  console.log(Array.isArray(arr));
+       arr[0]='harry';
+       console.log(arr);
+
+       let value=marks.indexOf(14);
+       console.log(value);
+
+    //  Mutating or Modifying arrays
+      //  marks.push(3564);
+      //  console.log(marks);
+    //    marks.unshift(1009);//start me 1009 aa jayega
+    //    console.log(marks);
+      //  marks.pop();
+      //  console.log(marks);
+      //  marks.shift();//starting se element hatayga
+      //  console.log(marks);
+       marks.splice(2,3);//kitna element remove krna hai
+       console.log(marks);
+    //    marks.reverse();
+    //    console.log(marks);
+       let marks2=[1,2,3,4]; 
+       marks=marks.concat(marks2);
+    //    console.log(marks);
+    
+    //key-value storage using objects
+    let myobj= {
+        name: 'harry',
+        channel: 'Code with harry',
+        isActive: true,
+        'first name':'Aradhana'
+    }
+    console.log(myobj.channel);
+   //  console.log(myobj[channel]);
+
+    let myObj1={
+      name:"Aradhana",
+      section:"K20NR",
+      minor:"Full stack",
+      func:function run(){
+         return `my name is ${this.name} from ${this.section} with ${this.minor}`;
+      }
+    }
+    console.log(myObj1.minor);
+    console.log(myObj1.func());
+
+    let myobj2={
+      subject:"french",
+      course:"301",
+      minor:"full-stack",
+      func2:function stringformat(){
+         return `my subject is ${this.subject} and it's course code is ${this.course}`;
+      }
+    }
+    console.log(myobj2.course);
+    
+    </script>
+</body>
+</html>

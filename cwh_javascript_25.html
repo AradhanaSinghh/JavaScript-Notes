@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Math</title>
+</head>
+<body>
+    
+    <h1>Math Object in javaScript</h1>
+    <script>
+
+        let x=4;
+        let y=2;
+        let z; 
+        z=x+y;
+        z=x-y;
+        z=x*y;
+        z=x/y;
+        console.log(z);
+
+        //Exploring the Math Object
+        z=Math;
+        z=Math.PI;
+        z=Math.E;
+        z=Math.round(5.5);//6
+        z=Math.round(5.6);//6
+        //what if you want to print 5.4 also as 6?
+        z=Math.ceil(5.3)//6
+        z=Math.ceil(5.5)//6
+        z=Math.floor(5.2)//5
+        z=Math.floor(5.6)//5
+        z=Math.floor(-5.2)//-6 why?-- -5.2 se chotta number -6 h
+        //absolute value mtlb negative ka positive
+        z=Math.abs(-5.3)
+        z=Math.abs(5)
+        z=Math.abs(5.2)
+        //square root
+        z=Math.sqrt(5);
+        z=Math.sqrt(49);
+        z=Math.pow(2,3);
+        z=Math.min(2,3);
+        z=Math.max(2,3);
+        z=Math.log(1);//0
+
+        //random number
+        z=Math.random();//0to 1 ke beech me aayga
+        // mujhe agar 100 ki range me lana h th
+        z=100*Math.random();//0-100 range
+        z=Math.ceil(50 + (100-50)*Math.random());//50-100 range 
+        console.log(z);
+        z=Math.floor(50 + (100-50)*Math.random());//50-100 range 
+        console.log(z); 
+
+    </script>
+</body>
+</html>

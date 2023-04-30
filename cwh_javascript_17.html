@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Events and Objects</title>
+</head>
+<body>
+    <div class="container">
+        <!--this-->
+        <!--this-->
+        <h1 id="heading" class="yourhead">Welcome to Aradhana's page</h1>
+        <div  class="child red" id="myfirst">child 1</div>
+        <ul class="this" id="myul">
+            <li class="childul" id="fui">this</li>
+            <li class="childul">is</li>
+            <li class="childul">a</li>
+            <li class="childul">list</li>
+            <li class="childul" id="lui">of my dreams</li>
+        </ul>
+        <div class="child">child 2</div>
+        <div class="child red">child 3</div>
+        <div class="child">child 4</div>
+        <form action="none.html"></form>
+        <input type="text" required placeholder="write your name">
+        <button type="button">Submit</button>
+        <!-- <a href="www.google.com" >go to google</a>-->
+        <br>
+        <br>
+        
+        <img src="flower.jpg" id="img1" width="300px" onclick=ClickMe() height="200px">
+        <!-- <img src="stars.jpg"  id="img" width="200px" height="200px"> -->
+        <br>
+        <br>
+        <button type="submit" id="btn" onclick="ClickMe()">Submit</button> 
+        <button type="submit" id="button1">Click me!</button>
+        <br><br>
+        <div class="color_yellow">mera yellow color hai</div>
+    </div>
+    </div>
+   
+    <script>
+
+        document.getElementById('heading').addEventListener('click',function(e){
+            let variable;
+            console.log('You have clicked the heading');
+            variable=e.target;
+            variable=e.target.className;
+            variable=e.target.classList;
+            variable=Array.from(e.target.classList);
+            variable=e.target.id;
+            variable=e.offsetX;//element se kitni door click kiya hai
+            variable=e.offsetY;//element se kitni door upwards click kiya hai
+            variable=e.clientX;//element window se kitni door click kiya hai
+            variable=e.clientY;//element window se kitni door upwards click kiya hai
+            console.log(variable);
+            // location.href='//codewithharry.com';
+        });
+
+        document.getElementById('myfirst').addEventListener("mouseover",function(e){
+           let variable;
+            console.log('You have clicked the heading');
+            e.target.style.color='red';
+            // location.href='//codewithharry.com'
+        });
+
+        // document.getElementById('img1').addEventListener("mouseover",function(e){
+        //     document.getElementById('img1').src="desert.jpg";
+        // });
+
+        function ClickMe(){
+            document.getElementById('img1').src="desert.jpg";
+        }
+
+        document.getElementById('img1').addEventListener("mouseleave",function(e){
+            document.getElementById('img1').src="stars.jpg";
+        })
+        
+        document.getElementById('button1').addEventListener("click",function(e){
+            console.log(e.clientX,e.clientY);
+        
+        })
+
+    </script>
+    
+</body>
+</html>

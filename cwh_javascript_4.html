@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Type conversion and coercion</title>
+</head>
+<body>
+    <h1>Type conversion and coercion</h1>
+    <script>
+        
+       console.log(`Welcome to Aradhana's page`);
+       //TYPE CONVERSION
+       let myVar;
+       myVar = String(34);
+       console.log(myVar, (typeof myVar));
+
+
+       let booleanVar = String(true);
+       console.log(booleanVar, (typeof booleanVar));
+       
+       let date=String(new Date());
+       console.log(date, (typeof date));
+
+       let arr=String([1,2,3,4,5]);
+       console.log(arr, (typeof arr));
+
+       let i=8;
+       console.log(i);
+       console.log(i.toString());
+
+       let stri="3456";
+       console.log(stri,(typeof stri));
+       let stri2=Number("3456");
+       console.log(stri2,(typeof stri2));
+       stri=Number("34D56");
+       console.log(stri,(typeof stri));
+       stri=Number([1,2,3,4]);
+       console.log(stri,(typeof stri));
+       stri2=Number(false);
+       console.log(stri2,(typeof stri2));
+       stri2=Number(true);
+       console.log(stri2,(typeof stri2));
+
+    //parse
+
+    let number = ('34');
+    number = parseFloat('342.0298');
+    console.log(number, (typeof number));
+    number=parseInt('34');
+    console.log(number, (typeof number));
+    console.log(number.toFixed(2),(typeof number));//number of zeros after a number
+
+    //TYPE COERCION
+
+    // let mystr1=Number("698a");//will print Nan
+    let mystr=Number("698");
+    let mynum=34;
+    console.log(mystr + mynum);
+
+    </script>
+</body>
+</html>

@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>loops</title>
+</head>
+<body>
+
+    <div class="container">this is a loop class</div>
+    <script>
+
+       console.log('if ,else, switch conditions ');
+       const age='65';
+       
+       if(age==19){
+        console.log('age is 19');
+       }
+    
+       else if(age===65){
+        console.log('Age is 65'); //=== checks type and value both. 
+       }
+
+       else{
+        console.log('Age is not 19');
+       }
+
+       const age1='65';
+       if(age1==19){
+        console.log('age is 19');
+       }
+
+       else if(age1 !== 65){
+        console.log('Age is 65 but type here is number not string');
+       }
+
+       else{
+        console.log('Age is not 19');
+       }
+
+       if(typeof vari !== 'undefined'){
+        console.log('vari is defined');
+       }
+
+       else{
+        console.log('vari is not defined');
+       }
+
+       
+       const doesDrive=false;
+       if(doesDrive){
+        console.log('Can drive');
+       }
+
+       else{
+        console.log('Cannot drive');
+       }
+
+    //    &&- and
+    //    ||-or
+    let prom=prompt("Type your age:");
+    if(prom<18){
+        console.log("underrage");
+    }
+    else if(prom==18){
+        console.log("you are an adult");
+    }
+    else{
+        console.log("you are greater than 18")
+    }
+    console.log(age==45?'Age is 45' : 'Age is not 45');
+    switch(age){
+        case 18:
+            console.log("You are 18");
+            break;//ek case execute krne ke liye break keyword use kre
+        case 28:
+            console.log("You are 28");
+            break;
+        case 8:
+            console.log("You are 8");
+            break;
+        default:
+            console.log('you are unknown age');
+            break;
+    }
+
+    // let a=prompt("write yes or no");
+    // if(a=="yes"){
+    //     document.write("Aradhana");
+    // }
+    
+    // else{
+    //     document.body.style.backgroundColor="black";
+    // }
+
+
+    </script>
+</body>
+</html>

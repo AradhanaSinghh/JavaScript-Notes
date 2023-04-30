@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Object prototype</title>
+</head>
+<body>
+    <h1>object prototype</h1>
+    <script>
+       
+       //Object literal : Object.prototype
+       let obj={
+        name:"aradhana",
+        channel:"aradhana",
+        address:"Earth"
+       }
+       console.log(obj);
+    //----------------------------
+
+    function Obj(givenName){
+        this.name=givenName;
+    }
+
+    // let obj2=new Obj("Aradhana");
+    // console.log(obj2);
+    // ----------------------------
+
+    Obj.prototype.getName=function(){
+        return this.name;
+    }
+
+    //object literal ke prototype ko change nahi kr skte
+    //global object jisse har object inherit kr raha h wh change nhi krna
+    
+    // Obj.prototype.setName=function(newName){
+    //     this.name=newName;
+    // }
+
+    let obj2=new Obj("Aradhana");
+    console.log(obj2.toString());
+    Obj.setName("harry");
+    console.log(Obj);
+    /*
+    console..
+
+    obj2.setName("harry");
+    console.log(obj2)
+    */
+
+    </script>
+    
+</body>
+</html>

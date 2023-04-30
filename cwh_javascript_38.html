@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>fetch api</title>
+    <link
+      rel="stylesheet"
+      href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css"
+    />
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+</head>
+<body>
+    <h1 style="margin-left:10rem">student list</h1>
+    <div class="container">
+    <button id="myBtn" class="btn btn-primary">Your button</button>
+    <button class="btn btn-primary "> fetch data</button>
+    </div>
+    <script>
+        let myBtn= document.getElementById("myBtn");
+        let content =document.getElementById("content");
+        function getData(){
+            console.log("Started getData");
+            url="aradhana.txt";
+            fetch(url).then((response)=>{
+                console.log("inside first then");
+                return response.text();
+            }).then((data)=>{
+                console.log("Inside second then");
+                console.log(data);
+            })
+        }
+
+        function postData(){
+            url="https://dummy.restapiexample.com/api/v1/create";
+            data=`{"name":"aradhana","salary":"123","age":"23"}`
+            params={ 
+                method:'post',
+                headers:{
+                    'Content-Type':'application/json'
+                },
+                body: data//JSON.stringify(data)--if data was not in string
+            }
+            fetch(url,params).then((response)=>{
+                return response.json();
+            }).then((data)=>{
+                console.log(data);
+            });
+        } 
+console.log("before running getData");
+getData(); 
+console.log("After running getData");
+postData() 
+    </script>
+</body>
+</html>

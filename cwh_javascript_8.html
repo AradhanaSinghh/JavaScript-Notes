@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Loops</title>
+</head>
+<body>
+
+    <script>
+        //General loops: for, while, do-while loop
+        let a=34;
+        a+=1;
+        a++;
+        document.write(a);
+
+        // for(let i=0; i<10; i++) {
+        //     console.log(i);
+        // }
+
+        
+        // let j=0;
+
+        // while(j<10){
+        //     console.log(j);
+        //     j++;
+        // }
+
+        // let k=0;
+        // do{
+        //     document.write(k+1);
+        //     k++;
+        // }while(k < 10);
+
+        //break and continue
+
+        // let i=0;
+        // do{
+        //     document.write(i+1);
+        //     if(i===5){
+        //         break;
+        //     }
+        //     i+=1;
+        // }while(i<10);
+
+        let l=0;
+        do{
+            
+            if(l===6){
+                l+=2;
+                continue;
+            }
+            console.log(l+2);
+            l++;
+        } while(l <= 10);
+
+         let arr=[1,4,4,5,65];
+
+        // for(let i=0; i < arr.length; i++){
+        //     console.log(arr[i]);
+        // }
+        
+        // arr.forEach(function(element){
+        //     console.log(element);
+        // });
+
+        arr.forEach(function(element,index,array){
+            console.log(element,index,array);
+        });
+
+        let obj = {
+            name: "Aradhana Singh",
+            age: 20,
+            type:"programmer",
+            os:"windows"
+        }
+
+        for(let key in obj){
+            console.log(`${key} or object is ${obj[key]}`);
+        }
+        console.log('done');
+    
+    </script>
+</body>
+</html>

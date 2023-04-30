@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Quotes</title>
+    <style>
+        h1{
+            text-align: center;
+            color: aqua;
+        }
+        body{
+            background: #000;
+        }
+        p{
+            color: white;
+            text-align: center;
+            font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+        }
+    </style>
+</head>
+<body>
+    <h1><em><u>Quotes Mania</u></em></h1>
+    <div id="container">
+        <p>Never give up</p>
+        <p>Remember! why you started?</p>
+        <p>Smile..You at least tried!</p>
+    </div>
+<script>
+    function addquote(callback){
+    setTimeout(()=>{
+        let new_quote = "<p>Make the impossible possible!</p>";
+        document.getElementById('container').insertAdjacentHTML('beforeend', new_quote);
+        callback();
+    },3000)
+}
+
+    function quote(){
+        setTimeout(()=>{
+            let quotes=document.getElementById('container').firstElementChild;
+            console.log(quotes.textContent);
+        },1000)
+    }
+    addquote(quote);
+    // function student(name,callback){
+    //     setTimeout(() => {
+    //         console.log("You are a student"+name);
+    //         callback();
+    //     }, 3000);
+    // }
+
+    // function teacher(){
+    //     setTimeout(() => {
+    //         console.log("you are a teacher");
+    //     }, 1000);
+    // }
+
+    // let name="Aradhana";
+    // student(name,teacher);
+
+</script>
+</body>
+</html>

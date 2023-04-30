@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Date and time in JS</title>
+</head>
+<body>
+    <h1>Date and Time in JavaScript</h1>
+    <script>
+        let date=new Date();
+        // console.log(typeof today);//object
+        let myDate=new Date('8-4-2002 04:54:08');
+        // myDate=new Date('June 13 1976');
+        // myDate=new Date('June 13/1976');
+        // myDate=new Date('09/13/1976');// mm/dd/yy if not mentioned sequence gives you an invalide date error
+        console.log(myDate);
+        let a;
+        a=myDate.getDay();//in console i will get 4 which means 0 for sunday and so on.
+        a=myDate.getDate();
+        a=myDate.getMinutes();
+        a=myDate.getHours();
+        a=myDate.getSeconds();
+        a=myDate.getTime();
+        //number of seconds since 1/jan/1970
+
+        a=myDate.getMilliseconds();
+        a=myDate.getMonth();
+        myDate.setDate(23);
+        myDate.setDate(23);
+        myDate.setFullYear(2004);
+        myDate.setMonth(2);
+        myDate.setMinutes(2);
+        myDate.setHours(2);
+        myDate.setSeconds(2);
+        myDate.toDateString();
+        console.log(a); 
+
+    </script>
+</body>
+</html>

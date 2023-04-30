@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+</head>
+<body>
+    <!-- element selectors:
+    1. Single element selector
+    2. Multi element selector -->
+
+    <div class="container">
+        <h1 id="heading">welcome to aradhana's page</h1>
+        <div class="child red" id="myfirst">child 1</div>
+        <div class="child">child 2</div>
+        <div class="child red">child 3</div>
+        <div class="child">child 4</div>
+        <form action="none.html"></form>
+        <input type="text" required placeholder="write your name">
+        <a href="www.google.com" >go to google</a>
+        <img src="flower.jpg">
+    </div>
+    <script>
+        //1. single element selector 
+        let element = document.getElementById('myfirst');
+        // element=element.className;
+        // element=element.childNodes;
+        // element=element.parentNode;
+        // element=element.parentElement;
+        // console.log(element); 
+        // you can style only.
+        element.style.color='red';
+        element.innerText='text changed';
+        element.innerHTML='<em>I am bold now</em>';
+        let sel=document.querySelector('#myfirst');
+        sel=document.querySelector('.child');
+        sel=document.querySelector('em');
+        console.log(sel);
+        sel.style.color='yellow';
+
+        //2. Multi element selector
+        // let elems=document.getElementsByClassName('child');
+        elems=document.getElementsByClassName('container');
+        // elems=document.getElementsByTagName('div');
+        // console.log(elems);
+        // console.log(elems[0].getElementsByClassName('child'));
+
+        Array.from(elems).forEach(element => {
+            console.log(element);
+            element.style.color='red';
+        });
+        
+    </script>
+</body>
+</html>

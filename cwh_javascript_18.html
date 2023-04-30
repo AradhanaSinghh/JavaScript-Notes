@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>More on JavaScript events</title>
+</head>
+<body>
+
+    <div class="container">
+        <!--this-->
+        <!--this-->
+        <h1 id="heading" class="yourhead">Welcome to Aradhana's page</h1>
+        <div  class="child red" id="myfirst">child 1</div>
+        <ul class="this" id="myul">
+            <li class="childul" id="fui">this</li>
+            <li class="childul">is</li>
+            <li class="childul">a</li>
+            <li class="childul">list</li>
+            <li class="childul" id="lui">of my dreams</li>
+        </ul>
+        <div class="child">child 2</div>
+        <div class="child red">child 3</div>
+        <div class="child">child 4</div>
+        <form action="none.html"></form>
+        <input type="text" required placeholder="write your name">
+        <button type="button" id="btn">Submit</button>
+        <!-- <a href="www.google.com" >go to google</a>
+        <img src="flower.jpg"> -->
+        <br>
+        <br>
+        <div class="no">This is a dummy div1</div>
+        <div class="no">This is a dummy div2</div>
+        <div class="no">This is a dummy div3</div>
+        <div class="no">This is a dummy div4</div>
+    </div>
+    </div>
+    <script>
+
+        // let btn=document.getElementById('btn');
+        // btn.addEventListener('click',function1);
+        // function function1(e){
+        //     console.log('clicking me');
+        //     e.preventDefault();
+        // }
+
+        //let btn=document.getElementById('btn');
+        // btn.addEventListener('click',func1);
+        // btn.addEventListener('mousedown',func3);//mousedown mtlb right click ya scroll ya phr mouse pe click krne pe b event listen hota hai.
+        // btn.addEventListener('dblclick',func2);
+        // function func1(e){
+        //     console.log("Thanks",e);
+        //     //koi bhi default behavior bypass krna hai th preventDefault use krenge.
+        //     e.preventDefault();--to prevent default behavior
+        // }
+        // function func2(e){
+        //     console.log("Thanks its a double click", e);
+        //     e.preventDefault();
+        // } 
+        // function func3(e){
+        //     console.log("Thanks its a mouse down", e);
+        //     e.preventDefault();
+        // } 
+        // document.querySelector('.no').addEventListener('mouseenter',function(){
+        //     console.log('You entered no!');
+        // })
+        // document.querySelector('.no').addEventListener('mouseleave',function(){
+        //     console.log('You exited no!');
+        // })
+        // document.querySelector('.container').addEventListener('mousemove',function(e){
+        //     // document.body.style.backgroundColor='pink';
+        //     console.log(e.offsetX,e.offsetY);
+        //     document.body.style.backgroundColor=`rgb(${e.offsetX},${e.offsetX}, ${e.offsetX},150)`;
+        //     console.log('You triggered mouse move event');
+        // })
+        
+    </script>
+</body>
+</html>
